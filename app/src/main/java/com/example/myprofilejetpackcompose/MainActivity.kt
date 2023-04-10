@@ -53,6 +53,25 @@ class MainActivity : ComponentActivity() {
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Bold
                         )
+                        Spacer(modifier = Modifier.height(20.dp))
+                        
+                        Column(horizontalAlignment = Alignment.Start,
+                            modifier = Modifier.fillMaxSize(),
+                        ) {
+                            // 会社名
+                            Text(text = "ディップ株式会社",
+                                fontSize = 26.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            // 部署、グループ名
+                            Text(text = "商品開発本部グロースエンジニリング課",
+                                color = Color.Gray,
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Normal
+                            )
+                            Spacer(modifier = Modifier.height(10.dp))
+                        }
                     }
                 }
             }
