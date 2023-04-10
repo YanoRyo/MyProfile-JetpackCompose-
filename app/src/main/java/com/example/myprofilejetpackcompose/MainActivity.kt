@@ -6,9 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -70,7 +70,28 @@ class MainActivity : ComponentActivity() {
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Normal
                             )
+                            Spacer(modifier = Modifier.height(20.dp))
+                            
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                // Email
+                                Icon(imageVector = Icons.Default.Email,
+                                    contentDescription = "email")
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text(text = "Email",
+                                    fontSize = 14.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            }
                             Spacer(modifier = Modifier.height(10.dp))
+                            Text(text = "ryo-yano@dip-net.co.jp",
+                                fontSize = 16.sp,
+                                fontWeight = FontWeight.Normal
+                            )
+                            Spacer(modifier = Modifier.height(5.dp))
+
+                            Divider(modifier = Modifier.clip(RoundedCornerShape(1000.dp)),
+                                thickness = 2.dp,
+                            )
                         }
                     }
                 }
