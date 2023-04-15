@@ -37,8 +37,8 @@ fun MyProfileJetpackComposeTheme(
     }
 
     rememberSystemUiController().setSystemBarsColor(
-        color = Color.White,
-        darkIcons = true
+        color = if (darkTheme) Color.Black else Color.White,
+        darkIcons = !darkTheme
     )
 
     MaterialTheme(
